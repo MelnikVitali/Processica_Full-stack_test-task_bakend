@@ -1,9 +1,9 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import dotenv from "dotenv"; // to use env variables
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import dotenv from 'dotenv'; // to use env variables
 
-import router from "./router.js";
+import router from './router.js';
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/api", router);
+app.use('/api', router);
 
 const startApp = async () => {
     try {
